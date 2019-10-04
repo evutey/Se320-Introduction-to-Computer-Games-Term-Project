@@ -1,2 +1,2 @@
-# Project1
-This is a test
+# SE320_PROJECT
+Welcome!

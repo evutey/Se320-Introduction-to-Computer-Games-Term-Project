@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="AbuDungeon.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Art" t="Include">
+          <e p="Sprites" t="Include">
+            <e p=" gothicvania patreon collection" t="Include">
+              <e p="public-license.txt" t="Include" />
+            </e>
+            <e p="Free Pixel Effects Pack" t="Include">
+              <e p="README.txt" t="Include" />
+            </e>
+            <e p="generic-dungeon-pack_v0.1_vacaroxa" t="Include">
+              <e p="release.txt" t="Include" />
+            </e>
+            <e p="gothicvania church" t="Include">
+              <e p="Assets" t="Include">
+                <e p="sounds" t="Include">
+                  <e p="music-credits.txt" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="gothicvania church files" t="Include">
+              <e p="public-license.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="controller.cs" t="Include" />
+        <e p="PlayerControl.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_AbuDungeon.-880072247.00" t="ExcludeRecursive" />
+  </component>
+</project>

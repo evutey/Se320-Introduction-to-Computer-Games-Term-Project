@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - spike
+  - coin
+  - turn
+  - stage2
   layers:
   - Default
   - TransparentFX

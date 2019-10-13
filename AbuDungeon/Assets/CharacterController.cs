@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
@@ -17,14 +19,14 @@ public class CharacterController : MonoBehaviour
     private bool isGrounded;
 
     public Animator animator;
-
+    
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
     private Rigidbody2D rb;
     private int extraJumps;
     public int extraJumpsValue;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,10 +65,20 @@ public class CharacterController : MonoBehaviour
         {
             die();
         }
-    }
+        if (collision.gameObject.tag == "stage2")
+        {
+            SceneManager.LoadScene("Stage2");
+        }
 
+        if (collision.gameObject.tag == "coin")
+        {
+            Destroy(collision.gameObject);
+            CoinCounter.coin++;
+        }
+    }
     void die()
     {
+        CoinCounter.coin = 0;
         Application.LoadLevel(Application.loadedLevel);
     }
     void Flip()

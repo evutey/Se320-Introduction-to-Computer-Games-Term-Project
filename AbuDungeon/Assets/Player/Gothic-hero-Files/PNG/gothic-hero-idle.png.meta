@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -86,7 +86,7 @@ TextureImporter:
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -101,9 +101,9 @@ TextureImporter:
       name: gothic-hero-idle_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 32
+        width: 38
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -112,7 +112,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8e48b4877ce34c48bbbac855095b29d
+      spriteID: 213de606616c547d1afda489c7d2ffd8
       internalID: 3702383623512059768
       vertices: []
       indices: 
@@ -122,9 +122,9 @@ TextureImporter:
       name: gothic-hero-idle_1
       rect:
         serializedVersion: 2
-        x: 41
+        x: 38
         y: 0
-        width: 32
+        width: 38
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -133,7 +133,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba909d4492d924169aedf36c06a415f5
+      spriteID: c44e56b274ad5497cbb52893d3b5c62e
       internalID: -5654833299211097151
       vertices: []
       indices: 
@@ -143,9 +143,9 @@ TextureImporter:
       name: gothic-hero-idle_2
       rect:
         serializedVersion: 2
-        x: 78
+        x: 76
         y: 0
-        width: 32
+        width: 38
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -154,7 +154,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95909e4f5f41a4b7986a09e59f8d5863
+      spriteID: 4cd8c09ff78e74a52b4cd52e837242ab
       internalID: -5921645933360183524
       vertices: []
       indices: 
@@ -164,9 +164,9 @@ TextureImporter:
       name: gothic-hero-idle_3
       rect:
         serializedVersion: 2
-        x: 117
+        x: 114
         y: 0
-        width: 32
+        width: 38
         height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -175,7 +175,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56a67799f0c2547e0ba293eeaf090eeb
+      spriteID: e9cfcf5b2d5d74d558f2d8f8ceea9d72
       internalID: 8654194646291298362
       vertices: []
       indices: 

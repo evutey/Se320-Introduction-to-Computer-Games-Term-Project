@@ -24,6 +24,7 @@ public class CharacterController : MonoBehaviour
     private Rigidbody2D rb;
     private int extraJumps;
     public int extraJumpsValue;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +56,18 @@ public class CharacterController : MonoBehaviour
             extraJumps--;
             rb.velocity = Vector2.up * jumpForce;
         }
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "spike")
+        {
+            die();
+        }
+    }
+
+    void die()
+    {
+        Application.LoadLevel(Application.loadedLevel);
     }
     void Flip()
     {

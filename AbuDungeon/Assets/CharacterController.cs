@@ -8,6 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class CharacterController : MonoBehaviour
 {
+    public AudioSource a1;
+    public AudioSource a2;
+    
     public float speed;
 
     public float jumpForce;
@@ -30,6 +33,8 @@ public class CharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        a1.Play();
+        StartCoroutine(playSound());
         rb = GetComponent<Rigidbody2D>();
     }
     private void FixedUpdate()
@@ -52,7 +57,7 @@ public class CharacterController : MonoBehaviour
             animator.SetBool("isJumping", false);
             extraJumps = extraJumpsValue;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
         {
             animator.SetBool("isJumping", true);
             extraJumps--;
@@ -87,6 +92,12 @@ public class CharacterController : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+    }
+    IEnumerator playSound()
+    {
+        yield return new WaitForSeconds(4.728f);
+        a2.Play();
+       
     }
 
 }

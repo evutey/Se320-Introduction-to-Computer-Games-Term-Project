@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
 
     public void takeDamage()
     {
-        health -= damage;
+        //health -= damage;
         Debug.Log("damage TAKEN !");
     }
 }

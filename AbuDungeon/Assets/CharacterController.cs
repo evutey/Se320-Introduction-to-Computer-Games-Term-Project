@@ -64,6 +64,8 @@ public class CharacterController : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
         }
     }
+
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "spike")
@@ -74,8 +76,7 @@ public class CharacterController : MonoBehaviour
         {
             SceneManager.LoadScene("Stage2");
         }
-
-        if (collision.gameObject.tag == "coin")
+        if (collision.gameObject.CompareTag("coin"))
         {
             Destroy(collision.gameObject);
             CoinCounter.coin++;

@@ -30830,7 +30830,7 @@ GameObject:
   - component: {fileID: 2016448194}
   - component: {fileID: 2016448193}
   - component: {fileID: 2016448192}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Coin (3)
   m_TagString: coin
   m_Icon: {fileID: 0}
@@ -31184,6 +31184,11 @@ PrefabInstance:
     - target: {fileID: 562340092948258449, guid: fe9cade32cd584198ad24d702599de4e,
         type: 3}
       propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 562340093474192370, guid: fe9cade32cd584198ad24d702599de4e,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -97,7 +97,6 @@ public class CharacterController : MonoBehaviour
     {
         yield return new WaitForSeconds(4.728f);
         a2.Play();
-       
     }
 
 }

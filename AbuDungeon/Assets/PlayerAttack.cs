@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
      private void Attack() {
          if (attack)
          { 
-             animator.setTrigger("attack");
+             animator.SetTrigger("attack");
          }
      }
 

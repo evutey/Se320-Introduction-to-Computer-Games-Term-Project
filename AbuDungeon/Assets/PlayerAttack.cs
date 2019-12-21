@@ -8,10 +8,11 @@ public class PlayerAttack : MonoBehaviour
 {
     private bool attack;
     public Animator animator;
+    public GameObject attackRange;
     // Start is called before the first frame update
+    public GameObject mudy;
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -23,9 +24,20 @@ public class PlayerAttack : MonoBehaviour
        
         
     }
-     private void Attack() {
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "enemy")
+        { 
+            other.transform.GetComponent<Enemy>().takeDamage();
+
+        } 
+    }
+
+    private void Attack() {
          if (attack)
          { 
+             attackRange.SetActive(true);
              animator.SetTrigger("attack");
          }
      }
@@ -41,5 +53,6 @@ public class PlayerAttack : MonoBehaviour
      private void StopAttack()
      {
          attack = false;
+         attackRange.SetActive(false);
      }
 }

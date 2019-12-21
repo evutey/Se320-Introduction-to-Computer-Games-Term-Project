@@ -8,6 +8,10 @@ TagManager:
   - coin
   - turn
   - stage2
+  - bonusExit
+  - bonusEnter
+  - AttackRange
+  - enemy
   layers:
   - Default
   - TransparentFX

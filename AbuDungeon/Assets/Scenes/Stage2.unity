@@ -1928,6 +1928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 218542056}
+  attackRange: {fileID: 530263978}
 --- !u!95 &218542056 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 562340093474192369, guid: fe9cade32cd584198ad24d702599de4e,
@@ -4705,6 +4706,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &530263978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3172328250094104595, guid: fe9cade32cd584198ad24d702599de4e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1601460056}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &556302963
 GameObject:
   m_ObjectHideFlags: 0
@@ -153829,6 +153836,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 562340092948258449, guid: fe9cade32cd584198ad24d702599de4e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 562340093474192368, guid: fe9cade32cd584198ad24d702599de4e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -153894,11 +153906,6 @@ PrefabInstance:
       propertyPath: a2
       value: 
       objectReference: {fileID: 1883002798}
-    - target: {fileID: 562340092948258449, guid: fe9cade32cd584198ad24d702599de4e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe9cade32cd584198ad24d702599de4e, type: 3}
 --- !u!1 &1604849820

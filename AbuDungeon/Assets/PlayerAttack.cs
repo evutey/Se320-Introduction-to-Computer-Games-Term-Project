@@ -6,11 +6,13 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private bool attack;
+    private bool _attack;
     public Animator animator;
     public GameObject attackRange;
+    
+    float dtime = 0.2f;
+    private float next_D = 0.0f;
     // Start is called before the first frame update
-    public GameObject mudy;
     void Start()
     {
     }
@@ -19,7 +21,6 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
        AttackInput();
-       Attack();
        StopAttack();
        
         
@@ -27,18 +28,22 @@ public class PlayerAttack : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.tag == "enemy")
+        if (other.gameObject.CompareTag("enemy"))
         { 
-            other.transform.GetComponent<Enemy>().takeDamage();
+            other.transform.GetComponent<Enemy>().TakeDamage();
 
         } 
     }
 
     private void Attack() {
-         if (attack)
-         { 
-             attackRange.SetActive(true);
-             animator.SetTrigger("attack");
+         if (_attack)
+         {
+            
+             //if (Time.time > next_D)
+             //{
+                 //next_D = Time.time + dtime;
+             StopAttack();
+             //}
          }
      }
 
@@ -46,13 +51,17 @@ public class PlayerAttack : MonoBehaviour
      {
          if (Input.GetKeyDown(KeyCode.LeftShift))
          {
-             attack = true;
+             gameObject.GetComponent<CircleCollider2D>().enabled = true;
+             _attack = true;
+             //attackRange.GetComponent<CircleCollider2D>().enabled = true;}}
+             animator.SetTrigger("attack");
          }
      }
 
      private void StopAttack()
      {
-         attack = false;
-         attackRange.SetActive(false);
+         _attack = false;
+         //attackRange.GetComponent<CircleCollider2D>().enabled = false;
+         gameObject.GetComponent<CircleCollider2D>().enabled = true;
      }
 }

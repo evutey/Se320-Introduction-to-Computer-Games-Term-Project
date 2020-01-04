@@ -9,8 +9,9 @@ public class HealthBarScript : MonoBehaviour
 	public  float health;
 
 	Image WhitePixel;
-    private float maxHealth = 100f;
+    public float maxHealth = 100f;
     public GameObject bar;
+    public Text text;
     
 
 	void Start ()
@@ -22,6 +23,7 @@ public class HealthBarScript : MonoBehaviour
 	void Update()
 	{
 		WhitePixel.fillAmount = health / maxHealth;
+		text.text = health.ToString() + "/" +  maxHealth.ToString() ;
 	}
 
 	public void setHealth(float x)
@@ -33,4 +35,14 @@ public class HealthBarScript : MonoBehaviour
 	{
 		return health;
 	}
+	public void setMaxHealth(float x)
+	{
+		maxHealth = x;
+	}
+
+	public float getMaxHealth()
+	{
+		return maxHealth;
+	}
+	
 }

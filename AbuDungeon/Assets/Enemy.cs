@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public float speed;
     public GameObject gObject;
 
     //private Animator anim;
@@ -15,25 +14,29 @@ public class Enemy : MonoBehaviour
         //anim = GetComponent<Animator>();
         //anim.SetBool("isRunning", true);
     }
-    void OnCollisionStay2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         
         if (other.gameObject.CompareTag("AttackRange"))
-        {
-            takeDamage();
-        }
-    }
+       {
+           TakeDamage();
+            
+       }
+        
+   }
 
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0)
+        if(health <= 0){
             Destroy(gObject);
+            
+        }
     }
 
-    public void takeDamage()
+    public void TakeDamage()
     {
-        health = health - 50;
+        health -= 50;
         Debug.Log("damage TAKEN !");
         
     }

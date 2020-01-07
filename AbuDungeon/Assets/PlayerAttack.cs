@@ -51,9 +51,9 @@ public class PlayerAttack : MonoBehaviour
      {
          if (Input.GetKeyDown(KeyCode.LeftShift))
          {
-             gameObject.GetComponent<CircleCollider2D>().enabled = true;
+             
              _attack = true;
-             //attackRange.GetComponent<CircleCollider2D>().enabled = true;}}
+             attackRange.GetComponent<CircleCollider2D>().enabled = true;
              animator.SetTrigger("attack");
          }
      }
@@ -61,7 +61,7 @@ public class PlayerAttack : MonoBehaviour
      private void StopAttack()
      {
          _attack = false;
-         //attackRange.GetComponent<CircleCollider2D>().enabled = false;
-         gameObject.GetComponent<CircleCollider2D>().enabled = true;
+         attackRange.GetComponent<CircleCollider2D>().enabled = false;
+        
      }
 }

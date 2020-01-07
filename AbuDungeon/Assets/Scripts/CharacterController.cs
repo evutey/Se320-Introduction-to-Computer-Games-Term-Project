@@ -69,9 +69,13 @@ public class CharacterController : MonoBehaviour
             extraJumps--;
             rb.velocity = Vector2.up * jumpForce;
         }
+        if (healthBar.GetComponent<HealthBarScript>().getHealth() <= 0)
+        {
+            die(); 
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("coin"))
         {
@@ -100,10 +104,18 @@ public class CharacterController : MonoBehaviour
             Destroy(collision.gameObject);
             CoinCounter.coin++;
         }
-        if (collision.gameObject.CompareTag("enemy"))
+        
+        if (collision.gameObject.tag == "boss")
         {
-            //HealthBar.health -= 50;
+            if (Time.time > next_D)
+            {
+                next_D = Time.time + dtime;
+                healthBar.GetComponent<HealthBarScript>()
+                    .setHealth(healthBar.GetComponent<HealthBarScript>().getHealth() - 35);
+            }
+
         }
+       
     }
 
     private void OnCollisionStay2D(Collision2D other)
@@ -117,11 +129,6 @@ public class CharacterController : MonoBehaviour
                     .setHealth(healthBar.GetComponent<HealthBarScript>().getHealth() - 25);
                 
             }
-            if (healthBar.GetComponent<HealthBarScript>().getHealth() <= 0)
-            {
-                die(); 
-            }
-            
         }
         if (other.gameObject.tag == "enemy")
         {
@@ -132,35 +139,14 @@ public class CharacterController : MonoBehaviour
                     .setHealth(healthBar.GetComponent<HealthBarScript>().getHealth() - 30);
                 
             }
-            if (healthBar.GetComponent<HealthBarScript>().getHealth() <= 0)
-            {
-                die(); 
-            }
-            
-        }
-        if (other.gameObject.tag == "boss")
-        {
-            if (Time.time > next_D)
-            {
-                next_D = Time.time + dtime;
-                healthBar.GetComponent<HealthBarScript>()
-                    .setHealth(healthBar.GetComponent<HealthBarScript>().getHealth() - 50);
-                
-            }
-            if (healthBar.GetComponent<HealthBarScript>().getHealth() <= 0)
-            {
-                die(); 
-            }
-            
         }
     }
-
     void die()
     {
         CoinCounter.coin = 0;
         Application.LoadLevel(Application.loadedLevel);
     }
-    public void TakeDamageFromBoss(float x)
+    public void TakeDamage(float x)
     {
         healthBar.GetComponent<HealthBarScript>()
             .setHealth(healthBar.GetComponent<HealthBarScript>().getHealth() - x);

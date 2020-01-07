@@ -37,8 +37,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage()
     {
         health -= 50;
-        Debug.Log("damage TAKEN !");
-        
+
     }
     
 }

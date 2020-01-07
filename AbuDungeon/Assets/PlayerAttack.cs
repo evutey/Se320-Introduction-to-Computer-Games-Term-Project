@@ -32,6 +32,11 @@ public class PlayerAttack : MonoBehaviour
         { 
             other.transform.GetComponent<Enemy>().TakeDamage();
 
+        }
+        if (other.gameObject.CompareTag("boss"))
+        { 
+            other.transform.GetComponent<Enemy>().TakeDamage();
+
         } 
     }
 

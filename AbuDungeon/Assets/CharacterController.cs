@@ -25,6 +25,7 @@ public class CharacterController : MonoBehaviour
 
     public Animator animator;
     public Transform exit;
+    public Transform bossTeleport;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
@@ -90,6 +91,10 @@ public class CharacterController : MonoBehaviour
         {
             transform.position = exit.position;
         }
+        if (collision.gameObject.tag == "bossTeleport")
+        {
+            transform.position = bossTeleport.position;
+        }
         if (collision.gameObject.CompareTag("coin"))
         {
             Destroy(collision.gameObject);
@@ -133,12 +138,33 @@ public class CharacterController : MonoBehaviour
             }
             
         }
+        if (other.gameObject.tag == "boss")
+        {
+            if (Time.time > next_D)
+            {
+                next_D = Time.time + dtime;
+                healthBar.GetComponent<HealthBarScript>()
+                    .setHealth(healthBar.GetComponent<HealthBarScript>().getHealth() - 50);
+                
+            }
+            if (healthBar.GetComponent<HealthBarScript>().getHealth() <= 0)
+            {
+                die(); 
+            }
+            
+        }
     }
 
     void die()
     {
         CoinCounter.coin = 0;
         Application.LoadLevel(Application.loadedLevel);
+    }
+    public void TakeDamageFromBoss(float x)
+    {
+        healthBar.GetComponent<HealthBarScript>()
+            .setHealth(healthBar.GetComponent<HealthBarScript>().getHealth() - x);
+        
     }
     void Flip()
     {

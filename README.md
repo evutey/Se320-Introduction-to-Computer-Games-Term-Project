@@ -1,7 +1,2 @@
 # SE320_PROJECT
-Welcome!
-2D karakter hareket ettirme kodlar ve tutorial:
-https://learn.unity.com/tutorial/live-session-2d-platformer-character-controller
-Pixel Art Assets: 1) https://www.kenney.nl/assets 2) https://itch.io/game-assets
-Ekstra 2D karakter hareket ettirme: 
-https://www.youtube.com/watch?v=dwcT-Dch0bA
+The Story of our Project:A hero who foundshimself in a dungeon.He doesnot rememberwhy he is here or howhecame here.The only thing he knows,toescape the dungeon,he has to find the exitbut before achievingthis faces up with a mercilessdemon...

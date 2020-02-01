@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - spike
+  - coin
+  - turn
+  - stage2
+  - bonusExit
+  - bonusEnter
+  - AttackRange
+  - enemy
+  - bossTeleport
+  - boss
+  - bossAttack
   layers:
   - Default
   - TransparentFX
@@ -13,9 +24,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Ground
+  - Player
+  - Enemies
   - 
   - 
   - 
